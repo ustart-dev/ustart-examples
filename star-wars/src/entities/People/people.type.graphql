@@ -1,0 +1,17 @@
+type People {
+  birth_year: String
+  eye_color: String
+  gender: String
+  hair_color: String
+  height: String
+  mass: String
+  name: String
+  skin_color: String
+  created: String
+  edited: String
+  url: String
+}
+
+type Query {
+  getPerson(id: Int!): People
+}
