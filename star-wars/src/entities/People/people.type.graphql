@@ -14,4 +14,6 @@ type People {
 
 type Query {
   getPerson(id: Int!): People
+
+  getPeople(page: Int, search: String): [People]
 }
