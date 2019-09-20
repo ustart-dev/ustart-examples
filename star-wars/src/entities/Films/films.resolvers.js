@@ -18,6 +18,14 @@ const filmResolvers = {
         response => response.data.results
       );
     },
+  },
+  Film: {
+    vehicles(film) {
+      // console.log(film.vehicles);
+      // return null;
+      let promisesArr = film.vehicles.map(v => axios.get(v));
+      return Promise.all(promisesArr).then(res => res.map(r => r.data));
+    }
   }
 };
 

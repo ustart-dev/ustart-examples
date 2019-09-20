@@ -8,6 +8,7 @@ type Film {
   created: String
   edited: String
   url: String
+  vehicles: [Vehicle]
 }
 
 type Query {
