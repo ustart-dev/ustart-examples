@@ -1,0 +1,21 @@
+type Vehicle {
+  cargo_capacity: String
+  consumables: String
+  cost_in_credits: String
+  created: String
+  crew: String
+  edited: String
+  length: String
+  manufacturer: String
+  max_atmosphering_speed: String
+  model: String
+  name: String
+  passengers: String
+  url: String
+  vehicle_class: String
+}
+
+type Query {
+  getVehicle(id: Int!): Vehicle
+  getVehicles(page: Int, search: String): [Vehicle]
+}
