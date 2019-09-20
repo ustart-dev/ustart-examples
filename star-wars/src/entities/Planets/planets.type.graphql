@@ -1,0 +1,19 @@
+type Planet {
+  name: String
+  rotation_period: String
+  orbital_period: String
+  diameter: String
+  climate: String
+  gravity: String
+  terrain: String
+  surface_water: String
+  population: String
+  created: String
+  edited: String
+  url: String
+}
+
+type Query {
+  getPlanet(id: Int!): Planet
+  getPlanets(page: Int, search: String): [Planet]
+}
