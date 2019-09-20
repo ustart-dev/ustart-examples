@@ -26,6 +26,12 @@ const peopleResolvers = {
       // console.log(people);
       // return null;
       return axios.get(people.homeworld).then(response => response.data);
+    },
+    films(people) {
+      // console.log(people.films);
+      // return null;
+      let promisesArr = people.films.map(f => axios.get(f));
+      return Promise.all(promisesArr).then(res => res.map(r => r.data));
     }
   }
 };

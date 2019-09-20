@@ -11,6 +11,7 @@ type People {
   edited: String
   url: String
   homeworld: Planet
+  films: [Film]
 }
 
 type Query {
