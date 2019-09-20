@@ -1,0 +1,16 @@
+type Film {
+  title: String
+  episode_id: Int
+  opening_crawl: String
+  director: String
+  producer: String
+  release_date: String
+  created: String
+  edited: String
+  url: String
+}
+
+type Query {
+  getFilm(id: Int!): Film
+  getFilms(search: String): [Film]
+}
