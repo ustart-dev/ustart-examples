@@ -20,6 +20,13 @@ const peopleResolvers = {
         response => response.data.results
       );
     },
+  },
+  People: {
+    homeworld(people) {
+      // console.log(people);
+      // return null;
+      return axios.get(people.homeworld).then(response => response.data);
+    }
   }
 };
 

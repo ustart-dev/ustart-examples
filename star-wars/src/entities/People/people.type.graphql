@@ -10,6 +10,7 @@ type People {
   created: String
   edited: String
   url: String
+  homeworld: Planet
 }
 
 type Query {
